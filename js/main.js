@@ -1,3 +1,6 @@
+// ==============================
+// FORMULARIO DE CONTACTO
+// ==============================
 const form = document.getElementById("contactForm");
 const respuesta = document.getElementById("respuesta");
 
@@ -8,8 +11,13 @@ form.addEventListener("submit", function (event) {
   const telefono = document.getElementById("telefono").value;
   const mensaje = document.getElementById("mensaje").value;
 
-  const texto = `Hola, mi nombre es ${nombre}. Mi teléfono es ${telefono}. ${mensaje}`;
+  // Validación básica
+  if (!nombre.trim() || !telefono.trim() || !mensaje.trim()) {
+    respuesta.textContent = "Por favor completa todos los campos.";
+    return;
+  }
 
+  const texto = `Hola, mi nombre es ${nombre}. Mi teléfono es ${telefono}. ${mensaje}`;
   const url = `https://wa.me/50587182143?text=${encodeURIComponent(texto)}`;
 
   window.open(url, "_blank");
@@ -19,6 +27,9 @@ form.addEventListener("submit", function (event) {
   form.reset();
 });
 
+// ==============================
+// LISTA DE PRODUCTOS
+// ==============================
 const productos = [
   {
     nombre: "Tablas de madera",
@@ -55,19 +66,31 @@ productos.forEach((producto) => {
   div.className = "producto";
 
   div.innerHTML = `
-  <div class="producto-card">
-    <h3>${producto.nombre}</h3>
-    <p>${producto.descripcion}</p>
-    <span class="badge">Disponible</span>
+    <div class="producto-card">
+      <h3>${producto.nombre}</h3>
+      <p>${producto.descripcion}</p>
+      <span class="badge">Disponible</span>
+      <button onclick="consultarProducto('${producto.nombre}')">
+        Consultar por WhatsApp
+      </button>
+    </div>
+  `;
 
-    <button onclick="window.open('https://wa.me/50587182143?text=Hola,%20estoy%20interesado%20en%20${producto.nombre}')">
-      Consultar por WhatsApp
-    </button>
-  </div>
-`;
   contenedor.appendChild(div);
 });
 
+// ==============================
+// WHATSAPP POR PRODUCTO
+// ==============================
+function consultarProducto(nombreProducto) {
+  const texto = `Hola, estoy interesado en ${nombreProducto}`;
+  const url = `https://wa.me/50587182143?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+}
+
+// ==============================
+// CHAT DE PREGUNTAS RÁPIDAS
+// ==============================
 function responder(tipo) {
   const respuesta = document.getElementById("respuestaChat");
 
@@ -85,4 +108,15 @@ function responder(tipo) {
     respuesta.textContent =
       "Estamos ubicados en Repartos Los Poetas – Nicaragua.";
   }
+}
+
+// ==============================
+// TOGGLE CHAT (MÓVILES FRIENDLY)
+// ==============================
+function toggleChat() {
+  const chat = document.getElementById("chatBox");
+  const btn = document.querySelector(".chat-toggle");
+
+  chat.classList.toggle("chat-hidden");
+  btn.textContent = chat.classList.contains("chat-hidden") ? "❓" : "✖";
 }

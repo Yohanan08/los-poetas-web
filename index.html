@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
       content="Venta de madera y materiales de construcción en Repartos Los Poetas, Nicaragua. Atención al por mayor y por menor."
@@ -11,13 +12,17 @@
       name="keywords"
       content="madera, ladrillos, grava, materiales de construcción, Nicaragua"
     />
-    <title>Los Poetas | Venta de Madera</title>
+    <meta name="author" content="Andersson Herrera" />
+
+    <title>Los Poetas | Venta de Madera y Materiales de Construcción</title>
+
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <!-- Header / Navegación -->
     <header>
-      <nav>
+      <nav aria-label="Navegación principal">
         <h1>Los Poetas</h1>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
@@ -30,97 +35,112 @@
     </header>
 
     <!-- Inicio -->
-    <section id="inicio">
-      <h2>Venta de Madera y Materiales de Construcción Los Poetas</h2>
-      <p>
-        Calidad, volumen y atención directa para tus proyectos de construcción
-      </p>
-    </section>
+    <main>
+      <section id="inicio">
+        <h2>Venta de Madera y Materiales de Construcción</h2>
+        <p>
+          Calidad, volumen y atención directa para tus proyectos de construcción
+          en Nicaragua.
+        </p>
+      </section>
 
-    <!-- Quiénes somos -->
-    <section id="nosotros">
-      <h2>Quiénes somos</h2>
-      <p>
-        Somos una empresa dedicada a la venta de madera y materiales de
-        construcción, ubicada en Repartos Los Poetas – Nicaragua.
-      </p>
-    </section>
+      <!-- Quiénes somos -->
+      <section id="nosotros">
+        <h2>Quiénes somos</h2>
+        <p>
+          Somos una empresa dedicada a la venta de madera y materiales de
+          construcción, ubicada en <strong>Repartos Los Poetas – Nicaragua</strong>.
+          Atendemos pedidos al por mayor y por menor, ofreciendo materiales de
+          calidad y atención directa.
+        </p>
+      </section>
 
-    <!-- Productos -->
-    <section id="productos">
-      <h2>Productos</h2>
-      <div id="listaProductos"></div>
-    </section>
+      <!-- Productos -->
+      <section id="productos">
+        <h2>Productos</h2>
+        <div id="listaProductos" aria-live="polite"></div>
+      </section>
 
-    <!-- Galería -->
-    <section id="galeria">
-      <h2>Galería</h2>
-      <div class="galeria">
-        <img src="img/venta-de-ladrillo.jpg" alt="Venta de Ladrillo" />
-        <img src="img/inventario-de-tabla.jpg" alt="Madera en inventario" />
-        <img src="img/descarga-de-tabla.jpg" alt="descarga de tabla" />
-        <img src="img/descarga-de-camion.jpg" alt="Descarga de camión" />
-        <img src="img/Tabla.png" alt="Tabla" />
-        <img src="img/viaje de graba.jpg" alt="viaje de graba" />
-        <img src="img/despacho de graba.jpg" alt="despacho de graba" />
-        <img src="img/almacen-de-madera.jpg" alt="Almacén de madera" />
-        <img src="img/grava.jpg" alt="Venta de Graba" />
-        <img
-          src="img/materiales de construccion.jpg"
-          alt="Materiales para la construcción"
-        />
-        <img src="img/bloques.png" alt="Bloques" />
-        <img src="img/madera-apilada.png" alt="Madera Apilada" />
-      </div>
-    </section>
+      <!-- Galería -->
+      <section id="galeria">
+        <h2>Galería</h2>
+        <div class="galeria">
+          <img src="img/venta-de-ladrillo.jpg" alt="Venta de ladrillos para construcción" />
+          <img src="img/inventario-de-tabla.jpg" alt="Inventario de tablas de madera" />
+          <img src="img/descarga-de-tabla.jpg" alt="Descarga de tablas de madera" />
+          <img src="img/descarga-de-camion.jpg" alt="Descarga de camión con materiales" />
+          <img src="img/Tabla.png" alt="Tablas de madera" />
+          <img src="img/viaje de graba.jpg" alt="Transporte de grava" />
+          <img src="img/despacho de graba.jpg" alt="Despacho de grava para obra" />
+          <img src="img/almacen-de-madera.jpg" alt="Almacén de madera" />
+          <img src="img/grava.jpg" alt="Venta de grava" />
+          <img
+            src="img/materiales de construccion.jpg"
+            alt="Materiales para la construcción"
+          />
+          <img src="img/bloques.png" alt="Bloques de construcción" />
+          <img src="img/madera-apilada.png" alt="Madera apilada" />
+        </div>
+      </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Repartos Los Poetas – Nicaragua</p>
-      <form id="contactForm">
-        <label>
-          Nombre
-          <input type="text" id="nombre" required />
-        </label>
+      <!-- Contacto -->
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Repartos Los Poetas – Nicaragua</p>
 
-        <label>
-          Teléfono
-          <input type="tel" id="telefono" required />
-        </label>
+        <form id="contactForm" aria-label="Formulario de contacto">
+          <label>
+            Nombre
+            <input type="text" id="nombre" required />
+          </label>
 
-        <label>
-          Mensaje
-          <textarea id="mensaje" required></textarea>
-        </label>
+          <label>
+            Teléfono
+            <input type="tel" id="telefono" required />
+          </label>
 
-        <button type="submit">Enviar mensaje</button>
-      </form>
+          <label>
+            Mensaje
+            <textarea id="mensaje" required></textarea>
+          </label>
 
-      <p id="respuesta"></p>
-    </section>
+          <button type="submit">Enviar mensaje</button>
+        </form>
 
+        <p id="respuesta" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <!-- Botón flotante WhatsApp -->
     <a
-      href="https://wa.me/50587182143?text=Hola%20estoy%20interesado%20en%20madera%20para%20construcción"
+      href="https://wa.me/50587182143?text=Hola%20estoy%20interesado%20en%20madera%20y%20materiales%20de%20construcción"
       class="whatsapp"
       target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp"
     >
       WhatsApp
     </a>
 
-    <div class="chat">
+    <!-- Chat -->
+    <div class="chat chat-hidden" id="chatBox" aria-live="polite">
       <h3>¿Tienes preguntas?</h3>
 
       <button onclick="responder('tipos')">¿Qué productos venden?</button>
       <button onclick="responder('mayor')">¿Venden al por mayor?</button>
       <button onclick="responder('ubicacion')">¿Dónde están ubicados?</button>
 
-      <a href="mailto:Aaroncanales2019@gmail.com" class="email-icon">
-        ✉️ Escribir correo
-      </a>
-
       <p id="respuestaChat"></p>
     </div>
+
+    <!-- Botón toggle chat (mobile) -->
+    <button
+      class="chat-toggle"
+      onclick="toggleChat()"
+      aria-label="Abrir chat de preguntas"
+    >
+      ❓
+    </button>
 
     <script src="js/main.js"></script>
   </body>
