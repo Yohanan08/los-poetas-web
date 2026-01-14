@@ -32,47 +32,86 @@ form.addEventListener("submit", function (event) {
 // ==============================
 const productos = [
   {
-    nombre: "Tablas de madera",
-    descripcion: "Madera resistente ideal para construcción.",
+    nombre: "Cemento Holcim Fuerte",
+    descripcion:
+      "Cemento de alta calidad para uso general. Ideal para vigas, columnas y lozas de concreto.",
+    imagen: "img/Cemento-Holcim.jpg",
   },
   {
-    nombre: "Listones",
-    descripcion: "Listones para soporte y refuerzo estructural.",
+    nombre: "Cemento Continentales",
+    descripcion:
+      "Excelente trabajabilidad y rendimiento para acabados, muros y construcciones generales.",
+    imagen: "img/continentales.png",
   },
   {
-    nombre: "Madera para encofrado",
-    descripcion: "Madera adecuada para trabajos de concreto.",
+    nombre: "Cemento Canal",
+    descripcion:
+      "Cemento de gran rendimiento y durabilidad, excelente para albañilería y acabados.",
+    imagen: "img/canal.jpg",
   },
   {
-    nombre: "Venta al por mayor",
-    descripcion: "Atención a proyectos de gran volumen.",
+    nombre: "Tablas de Madera",
+    descripcion:
+      "Tablas de pino de alta calidad, seleccionadas para cimbra, carpintería y acabados finos en construcción.",
+    imagen: "img/inventario-de-tabla.jpg",
+  },
+  {
+    nombre: "Cuartones y Reglas",
+    descripcion:
+      "Material estructural de madera resistente, ideal para soportes de techos, marcos y refuerzos de obra.",
+    imagen: "img/almacen-de-madera.jpg",
   },
   {
     nombre: "Ladrillos",
     descripcion:
-      "Ladrillos resistentes para construcción de muros, cerramientos y estructuras. Ideales para proyectos de obra gris, con buena durabilidad y fácil colocación.",
+      "Ladrillos de arcilla cocida de alta resistencia, perfectos para muros de carga, cercas y detalles arquitectónicos.",
+    imagen: "img/venta-de-ladrillo.jpg",
   },
   {
-    nombre: "Grava",
+    nombre: "Bloques de Concreto",
     descripcion:
-      "Grava de construcción utilizada en la preparación de concreto y obras civiles. Material esencial para mezclas resistentes y trabajos estructurales.",
+      'Bloques certificados de diferentes medidas (4", 6", 8") para paredes estructurales seguras y duraderas.',
+    imagen: "img/bloques.png",
+  },
+  {
+    nombre: "Grava Triturada",
+    descripcion:
+      "Grava limpia y de granulometría ideal para mezclas de concreto de alta resistencia y bases de suelos.",
+    imagen: "img/grava.jpg",
+  },
+  {
+    nombre: "Venta al por Mayor",
+    descripcion:
+      "Atención especial a proyectos grandes y constructoras con precios competitivos y logística de entrega rápida.",
+    imagen: "img/descarga-de-camion.jpg",
+  },
+  {
+    nombre: "Perlines (Galvanizados)",
+    descripcion: "Perlines de alta resistencia para estructuras de techos. Resistentes a la corrosión.",
+    imagen: "img/Perlines.jpg",
   },
 ];
 
 const contenedor = document.getElementById("listaProductos");
 
+// Renderizado de productos con diseño mejorado
 productos.forEach((producto) => {
   const div = document.createElement("div");
   div.className = "producto";
 
   div.innerHTML = `
     <div class="producto-card">
-      <h3>${producto.nombre}</h3>
-      <p>${producto.descripcion}</p>
-      <span class="badge">Disponible</span>
-      <button onclick="consultarProducto('${producto.nombre}')">
-        Consultar por WhatsApp
-      </button>
+      <div class="producto-img-container">
+        <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy">
+      </div>
+      <div class="producto-info">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.descripcion}</p>
+        <span class="badge">Stock Disponible</span>
+        <button class="btn-cotizar" onclick="consultarProducto('${producto.nombre}')">
+           Consultar por WhatsApp
+        </button>
+      </div>
     </div>
   `;
 
@@ -96,7 +135,7 @@ function responder(tipo) {
 
   if (tipo === "tipos") {
     respuesta.textContent =
-      "Vendemos madera, ladrillos, grava y materiales para construcción.";
+      "Ofrecemos cementos, madera, perlines GHT, grava, ladrillos y cajas metálicas para techo.";
   }
 
   if (tipo === "mayor") {
@@ -106,7 +145,7 @@ function responder(tipo) {
 
   if (tipo === "ubicacion") {
     respuesta.textContent =
-      "Estamos ubicados en Repartos Los Poetas – Nicaragua.";
+      "Estamos ubicados de donde fue laboratorios Divina 1km al este, mano derecha contiguo a la Bahía del bus. ¡Te esperamos!";
   }
 }
 

@@ -1,121 +1,47 @@
 🪵 Los Poetas – Venta de Madera y Materiales de Construcción
+Sitio web corporativo desarrollado para una empresa real en León, Nicaragua, especializada en la comercialización de madera, cementos y materiales de construcción.
 
-Sitio web corporativo desarrollado para una empresa real dedicada a la venta de madera y materiales de construcción, ubicada en Repartos Los Poetas, Nicaragua.
+Este proyecto es parte de mi portafolio profesional como Desarrollador Frontend Junior, enfocado en crear soluciones digitales funcionales que resuelvan necesidades de negocios reales.
 
-Este proyecto forma parte de mi portafolio profesional como Desarrollador Frontend Junior, enfocado en aplicar buenas prácticas de desarrollo web, experiencia de usuario (UX) y funcionalidades reales orientadas a negocio.
+🌐 Demo en producción: https://los-poetas-web.vercel.app/
 
-🌐 Demo en producción
+🎯 Objetivo del Proyecto
+El objetivo principal fue digitalizar un negocio local, permitiendo que los clientes consulten el inventario en tiempo real y establezcan contacto directo para cotizaciones rápidas.
 
-👉 https://los-poetas-web.vercel.app/
+✨ Funcionalidades Implementadas
+Catálogo Dinámico: Renderizado de productos (Madera, Perlines GHT, Cementos, Cajas Eléctricas) mediante JavaScript para facilitar la actualización del stock.
 
-🎯 Objetivo del proyecto
+Identidad Visual Completa: Implementación de logo personalizado, Favicon y paleta de colores corporativa (Verde Bosque y Gris Cemento).
 
-Crear un sitio web claro, rápido y funcional para un negocio local
+Integración con WhatsApp: Botón flotante con icono oficial y enlaces personalizados por producto para agilizar ventas.
 
-Facilitar el contacto directo con clientes mediante WhatsApp
+Geolocalización: Mapa interactivo de Google Maps configurado para la ubicación exacta de la empresa en León.
 
-Mostrar productos y materiales de forma visual y accesible
+Prueba Social: Sección de marcas aliadas (Holcim, Canal, Continentales) que refuerza la credibilidad del negocio.
 
-Priorizar experiencia móvil (mobile-first)
+Chat FAQ: Asistente de preguntas rápidas para resolver dudas sobre ubicación y tipos de venta (mayoreo/menudeo).
 
-✨ Funcionalidades
+Diseño Responsivo: Optimización completa para dispositivos móviles, asegurando que los constructores puedan cotizar desde la obra.
 
-Catálogo de productos dinámico generado con JavaScript
+🛠 Tecnologías Utilizadas
+HTML5: Estructura semántica y metatags SEO para posicionamiento local.
 
-Enlaces a WhatsApp con mensajes automáticos personalizados por producto
+CSS3 (Flexbox & Grid): Diseño modular, tarjetas de productos alineadas y efectos de interacción (hover).
 
-Galería de imágenes en formato cards con efectos hover
+JavaScript (Vanilla): Lógica de renderizado, validación de formularios y manejo de eventos del DOM.
 
-Formulario de contacto con validación y feedback visual al usuario
+Vercel: Hosting y despliegue continuo (CI/CD).
 
-Chat de atención básica con respuestas predefinidas (FAQ)
+📂 Estructura del Proyecto
+Plaintext
 
-Botón flotante de WhatsApp con formato internacional (wa.me)
-
-Chat flotante optimizado para móviles (icono toggle)
-
-Diseño responsive para dispositivos móviles y escritorio
-
-🧠 Decisiones técnicas
-
-Se utilizó JavaScript Vanilla para reforzar fundamentos sin frameworks
-
-El catálogo de productos se renderiza dinámicamente para facilitar escalabilidad
-
-Se aplicaron efectos hover usando CSS (transform y transition)
-
-La integración con WhatsApp se realizó usando el formato internacional wa.me
-
-Se optimizó la experiencia móvil evitando elementos invasivos
-
-Se mantuvo una estructura clara, simple y mantenible del proyecto
-
-🛠 Tecnologías utilizadas
-
-HTML5 – Estructura semántica
-
-CSS3 – Diseño responsive, grid y animaciones
-
-JavaScript (Vanilla) – Lógica, DOM y eventos
-
-📂 Estructura del proyecto
-├── index.html
+├── index.html     # Estructura principal y secciones de negocio
 ├── css/
-│   └── styles.css
+│   └── styles.css # Estilos personalizados y variables de marca
 ├── js/
-│   └── main.js
+│   └── main.js   # Lógica del catálogo y comunicación con WhatsApp
 ├── img/
-│   └── (imágenes del proyecto)
-└── README.md
-
-📱 Enfoque responsive
-
-Diseño mobile-first
-
-Chat flotante adaptado para móviles
-
-Navegación clara en pantallas pequeñas
-
-Interacciones pensadas para usuarios reales
-
-📚 Aprendizajes
-
-Manipulación del DOM con JavaScript
-
-Mejora de experiencia de usuario (UX)
-
-Organización de código frontend
-
-Integración de servicios externos como WhatsApp
-
-Diseño responsive sin uso de frameworks
-
-Preparación de un proyecto real para producción
-
-🚀 Mejoras futuras
-
-Envío real del formulario a correo electrónico
-
-Panel de administración para productos
-
-Filtros por categoría
-
-Optimización SEO y rendimiento (Lighthouse)
-
-Accesibilidad (ARIA labels)
-
-📌 Estado del proyecto
-
-✅ Proyecto funcional y desplegado en producción
-🔧 En mejora continua
-
+│   └── ...        # Favicon, logos de marcas y fotos reales del stock
+└── README.md      # Documentación del proyecto
 👤 Autor
-
-Andersson Herrera
-Desarrollador Frontend Junior
-
-🔗 GitHub: https://github.com/Yohanan08
-
-🔗 LinkedIn: https://www.linkedin.com/in/andersson-herrera-moreno-26a275324/
-
-💬 Nota: Este proyecto fue desarrollado sin frameworks para demostrar dominio de fundamentos de frontend.
+Andersson Herrera Desarrollador Frontend Junior apasionado por crear interfaces que conecten empresas con sus clientes.
